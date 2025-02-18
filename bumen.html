@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Wisata Bumen Jelapan</title>
+    <link rel="icon" type="image/x-icon" href="assets/logobumen.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C3332',
+                        secondary: '#EE8C39'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white mx-auto font-sans">
+    <!-- Navigation -->
+    <nav class="bg-primary px-6 py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo atau Nama Brand -->
+            <a href="bumen.html">
+                <div class="flex items-center space-x-2">
+                    <img src="assets/logobumen.png" alt="Bumen Jelapan Logo" class="h-12"> <!-- Logo -->
+                    <span class="text-white font-semibold text-xl">Bumen Jelapan</span> <!-- Teks -->
+                </div>
+            </a>    
+    
+            <!-- Menu untuk Desktop (Tampil di layar besar) -->
+            <div class="hidden md:flex gap-8">
+                <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+                <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+                <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+            </div>
+            <!-- Tombol Hubungi Kami -->
+            <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors hidden md:block">
+                Hubungi Kami
+            </button>
+    
+            <!-- Tombol Hamburger untuk Mobile -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Menu untuk Mobile (Tampil saat tombol hamburger diklik) -->
+        <div class="navbar-menu hidden flex flex-col bg-primary w-full px-6 py-4 space-y-2 md:hidden">
+            <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+            <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+            <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+            <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors w-full mt-2">
+                Hubungi Kami
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative text-white min-h-screen flex flex-col justify-center overflow-hidden">
+        <!-- Background dengan tinggi 75% -->
+        <div class="absolute inset-0 bg-primary h-[75%] z-0"></div>
+    
+        <!-- Konten Section -->
+        <div class="container mx-auto flex flex-col lg:flex-row items-center py-16 px-6 relative z-10">
+            <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-8 animate-fadeInUp" style="animation-delay: 0.1s;">
+                <h2 class="text-5xl font-bold mb-4">Desa Wisata Bumen DJelapan</h2>
+                <p class="text-lg mb-6">Beragam usaha dan aktivitas masyarakat yang menarik untuk dijelajahi</p>
+            </div>
+    
+            <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 animate-fadeInUp">
+                <p class="text-lg mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae molestiae reprehenderit optio, impedit voluptate architecto dicta veniam ab, dignissimos.</p>
+                <a href="#" class="border border-secondary text-secondary font-semibold py-2 px-4 rounded-lg transition-colors inline-block hover:bg-secondary hover:text-white hover:shadow-lg">
+                    Jelajahi Sekarang
+                </a>
+            </div>
+        </div>
+    
+        <!-- Gambar -->
+        <div class="container mx-auto px-6 animate-fadeInUp relative z-10" style="animation-delay: 0.3s;">
+            <div class="rounded-lg overflow-hidden shadow-lg hover-grow w-3/4 h-96 mx-auto mb-16">
+                <img src="assets/agrowisata-1080x675.jpg" alt="Desa Wisata" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- UMKM Section -->
+    <section id="umkm" class="py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Usaha Mikro Kecil Menengah</h2>
+            <p class="mb-8 max-w-3xl mx-auto text-center">Dari kerajinan tangan yang unik hingga kuliner lokal yang lezat, setiap sudut Desa Indah menyimpan cerita dan pengalaman yang tak terlupakan.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/umkm1.png" alt="UMKM 1" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/umkm2.jpeg" alt="UMKM 2" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/umkm3.jpg" alt="UMKM 3" class="w-full h-64 object-cover"/>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="bg-secondary text-white px-6 py-2 rounded hover:bg-opacity-80 transition-colors">Lihat Semua UMKM</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homestay Section -->
+    <section id="homestay" class="bg-primary text-white py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Homestay</h2>
+            <p class="mb-8 max-w-3xl mx-auto text-center">Dari kerajinan tangan yang unik hingga kuliner lokal yang lezat, setiap sudut Desa Indah menyimpan cerita dan pengalaman yang tak terlupakan.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/homestay1.jpg" alt="Homestay 1" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/homestay2.jpg" alt="Homestay 2" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/homestay3.jpg" alt="Homestay 3" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/homestay1.jpg" alt="Homestay 4" class="w-full h-64 object-cover"/>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="bg-secondary text-white px-6 py-2 rounded hover:bg-opacity-80 transition-colors">Jelajahi Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinasi Section -->
+    <section id="destinasi" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <img src="assets/borobudur.jpg" alt="Destinasi" class="w-full h-[400px] object-cover"/>
+                </div>
+                <div class="animate-fadeInUp">
+                    <h2 class="text-3xl font-bold mb-4">Destinasi Wisata</h2>
+                    <p class="mb-6">Dari kerajinan tangan yang unik hingga kuliner lokal yang lezat, setiap sudut Desa Indah menyimpan cerita dan pengalaman yang tak terlupakan.</p>
+                    <button class="bg-secondary text-white px-6 py-2 rounded hover:bg-opacity-80 transition-colors">Lihat Semua Destinasi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Activities -->
+    <section class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Kegiatan Kemasyarakatan</h2>
+            <div class="bg-primary rounded-lg p-8">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Gotong Royong</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Pertanian</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Bakti Sosial</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Pendidikan</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Kesehatan</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Kesenian</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <span class="mt-2 text-white text-center">Keagamaan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="bg-primary text-white py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Hubungi Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1977.3334768665582!2d110.18888608876662!3d-7.6111721981010145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8ce2e55db611%3A0x7e631b3ee6f26824!2sBumen%20Djelapan%2C%20Karangrejo%2C%20Kec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1738543007396!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-xl">Alamat</h3>
+                    <p class="mb-6">Jl. Desa Indah No. 123, Kecamatan Sejahtera, Kabupaten Makmur, Provinsi Bahagia</p>
+                    
+                    <h3 class="font-bold mb-4 text-xl">Kontak</h3>
+                    <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>0812345678910</p>
+                    <p class="mb-6"><i class="fas fa-envelope mr-2"></i>bumenjelapan@gmail.com</p>
+                    
+                    <h3 class="font-bold mb-4 text-xl">Media Sosial</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-4 right-4 bg-secondary text-white p-2 rounded-full hidden hover:bg-opacity-80 transition-colors">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.querySelector(".md\\:hidden button");
+            const mobileMenu = document.querySelector(".navbar-menu");
+
+            menuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    </script>
+</body>
+</html>

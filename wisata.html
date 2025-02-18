@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Wisata</title>
+    <link rel="icon" type="image/x-icon" href="assets/logobumen.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+      tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C3332',
+                        secondary: '#EE8C39',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+      }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <nav class="bg-primary px-6 py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo atau Nama Brand -->
+            <a href="bumen.html">
+                <div class="flex items-center space-x-2">
+                    <img src="assets/logobumen.png" alt="Bumen Jelapan Logo" class="h-12"> <!-- Logo -->
+                    <span class="text-white font-semibold text-xl">Bumen Jelapan</span> <!-- Teks -->
+                </div>
+            </a>    
+    
+            <!-- Menu untuk Desktop (Tampil di layar besar) -->
+            <div class="hidden md:flex gap-8">
+                <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+                <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+                <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+            </div>
+            <!-- Tombol Hubungi Kami -->
+            <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors hidden md:block">
+                Hubungi Kami
+            </button>
+    
+            <!-- Tombol Hamburger untuk Mobile -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Menu untuk Mobile (Tampil saat tombol hamburger diklik) -->
+        <div class="navbar-menu hidden flex flex-col bg-primary w-full px-6 py-4 space-y-2 md:hidden">
+            <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+            <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+            <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+            <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors w-full mt-2">
+                Hubungi Kami
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero bg-cover bg-center h-96 flex items-center" style="background-image: url('assets/backgroundWisata.jpg');">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-bold text-white">Destinasi Wisata</h2>
+                <p class="text-white">Jelajahi keindahan di Bumen Djelapan dan Sekitarnya</p>
+            </div>
+        </section>
+
+        <section id="attractions" class="container mx-auto px-6 py-12">
+            <h3 class="text-3xl font-semibold text-primary mb-8">Objek Wisata</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Attraction 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="assets/jek5.jpg" alt="Air Terjun" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Air Terjun Indah</h4>
+                        <p class="text-gray-600 mb-4">Nikmati keindahan air terjun alami dengan pemandangan yang memukau.</p>
+                        <button onclick="openGallery('gallery1')" class="bg-secondary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Lihat Galeri</button>
+                    </div>
+                </div>
+
+                <!-- Attraction 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="assets/jek.jpg" alt="Sawah" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Sawah Berundak</h4>
+                        <p class="text-gray-600 mb-4">Jelajahi keindahan sawah berundak yang menjadi ciri khas desa kami.</p>
+                        <button onclick="openGallery('gallery2')" class="bg-secondary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Lihat Galeri</button>
+                    </div>
+                </div>
+
+                <!-- Attraction 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="assets/jek3.jpg" alt="Pasar Tradisional" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Pasar Tradisional</h4>
+                        <p class="text-gray-600 mb-4">Rasakan atmosfer unik dan belanja produk lokal di pasar tradisional kami.</p>
+                        <button onclick="openGallery('gallery3')" class="bg-secondary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Lihat Galeri</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Modals -->
+    <div id="gallery1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg max-w-3xl w-full">
+            <h4 class="text-2xl font-semibold text-primary mb-4">Galeri Air Terjun Indah</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="assets/jek.jpg" alt="Air Terjun 1" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek2.jpg" alt="Air Terjun 2" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek3.jpg" alt="Air Terjun 3" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek4.jpg" alt="Air Terjun 4" class="w-full h-48 object-cover rounded">
+            </div>
+            <button onclick="closeGallery('gallery1')" class="mt-6 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Tutup</button>
+        </div>
+    </div>
+
+    <div id="gallery2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg max-w-3xl w-full">
+            <h4 class="text-2xl font-semibold text-primary mb-4">Galeri Sawah Berundak</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="assets/jek.jpg" alt="Air Terjun 1" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek2.jpg" alt="Air Terjun 2" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek3.jpg" alt="Air Terjun 3" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek4.jpg" alt="Air Terjun 4" class="w-full h-48 object-cover rounded">
+            </div>
+            <button onclick="closeGallery('gallery2')" class="mt-6 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Tutup</button>
+        </div>
+    </div>
+
+    <div id="gallery3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg max-w-3xl w-full">
+            <h4 class="text-2xl font-semibold text-primary mb-4">Galeri Pasar Tradisional</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="assets/jek.jpg" alt="Air Terjun 1" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek2.jpg" alt="Air Terjun 2" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek3.jpg" alt="Air Terjun 3" class="w-full h-48 object-cover rounded">
+                <img src="assets/jek4.jpg" alt="Air Terjun 4" class="w-full h-48 object-cover rounded">
+            </div>
+            <button onclick="closeGallery('gallery3')" class="mt-6 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <footer class="bg-primary text-white py-16 px-6">
+      <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">Hubungi Kami</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1977.3334768665582!2d110.18888608876662!3d-7.6111721981010145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8ce2e55db611%3A0x7e631b3ee6f26824!2sBumen%20Djelapan%2C%20Karangrejo%2C%20Kec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1738543007396!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <div>
+                  <h3 class="font-bold mb-4 text-xl">Alamat</h3>
+                  <p class="mb-6">Jl. Desa Indah No. 123, Kecamatan Sejahtera, Kabupaten Makmur, Provinsi Bahagia</p>
+                  
+                  <h3 class="font-bold mb-4 text-xl">Kontak</h3>
+                  <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>0812345678910</p>
+                  <p class="mb-6"><i class="fas fa-envelope mr-2"></i>bumenjelapan@gmail.com</p>
+                  
+                  <h3 class="font-bold mb-4 text-xl">Media Sosial</h3>
+                  <div class="flex gap-4">
+                      <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+      <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-4 right-4 bg-secondary text-white p-2 rounded-full hidden hover:bg-opacity-80 transition-colors">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    <script>
+        function openGallery(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById(id).classList.add('flex', 'animate-fadeIn');
+        }
+
+        function closeGallery(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.getElementById(id).classList.remove('flex', 'animate-fadeIn');
+        }
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.querySelector(".md\\:hidden button");
+            const mobileMenu = document.querySelector(".navbar-menu");
+
+            menuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+        
+
+    </script>
+</body>
+</html>

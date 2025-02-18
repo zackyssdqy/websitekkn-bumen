@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Homestays</title>
+    <link rel="icon" type="image/x-icon" href="assets/logobumen.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C3332',
+                        secondary: '#EE8C39'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-100">
+   <!-- Navigation -->
+   <nav class="bg-primary px-6 py-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo atau Nama Brand -->
+        <a href="bumen.html">
+            <div class="flex items-center space-x-2">
+                <img src="assets/logobumen.png" alt="Bumen Jelapan Logo" class="h-12"> <!-- Logo -->
+                <span class="text-white font-semibold text-xl">Bumen Jelapan</span> <!-- Teks -->
+            </div>
+        </a>    
+
+        <!-- Menu untuk Desktop (Tampil di layar besar) -->
+        <div class="hidden md:flex gap-8">
+            <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+            <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+            <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+        </div>
+        <!-- Tombol Hubungi Kami -->
+        <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors hidden md:block">
+            Hubungi Kami
+        </button>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu untuk Mobile (Tampil saat tombol hamburger diklik) -->
+    <div class="navbar-menu hidden flex flex-col bg-primary w-full px-6 py-4 space-y-2 md:hidden">
+        <a href="umkm.html" class="text-white hover:text-secondary transition-colors">UMKM</a>
+        <a href="homestay.html" class="text-white hover:text-secondary transition-colors">Homestay</a>
+        <a href="wisata.html" class="text-white hover:text-secondary transition-colors">Pariwisata</a>
+        <button class="bg-white text-primary px-4 py-2 rounded hover:bg-secondary hover:text-white transition-colors w-full mt-2">
+            Hubungi Kami
+        </button>
+    </div>
+</nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Homestay Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="assets/jek2.jpg" alt="Homestay 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Cozy Village Retreat</h2>
+                    <p class="text-gray-600 mb-4">Experience the warmth of village life in our comfortable homestay.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Free Wi-Fi</li>
+                            <li>Air Conditioning</li>
+                            <li>Traditional Breakfast</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Double Room (2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 123 456 7890</p>
+                        <p class="text-gray-600">Email: cozy@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Homestay Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="assets/jek5.jpg" alt="Homestay 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Rustic Family House</h2>
+                    <p class="text-gray-600 mb-4">A spacious homestay perfect for families looking to experience village life.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Free Wi-Fi</li>
+                            <li>Kitchen</li>
+                            <li>Garden</li>
+                            <li>Parking</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Family Room (4-6 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 987 654 3210</p>
+                        <p class="text-gray-600">Email: rustic@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Homestay Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="assets/jek4.jpg" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Homestay 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-primary mb-2">Traditional Cottage</h2>
+                    <p class="text-gray-600 mb-4">Immerse yourself in the local culture with our authentic village cottage.</p>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Facilities:</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Traditional Decor</li>
+                            <li>Outdoor Seating</li>
+                            <li>Local Guide Available</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Room Type/Capacity:</h3>
+                        <p class="text-gray-600">Single/Double Room (1-2 persons)</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-primary mb-2">Contact:</h3>
+                        <p class="text-gray-600">Phone: +62 456 789 0123</p>
+                        <p class="text-gray-600">Email: cottage@villagehomestay.com</p>
+                    </div>
+                    <a href="#" class="inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <footer class="bg-primary text-white py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Hubungi Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="rounded-lg overflow-hidden shadow-lg hover-grow">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1977.3334768665582!2d110.18888608876662!3d-7.6111721981010145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8ce2e55db611%3A0x7e631b3ee6f26824!2sBumen%20Djelapan%2C%20Karangrejo%2C%20Kec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1738543007396!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4 text-xl">Alamat</h3>
+                    <p class="mb-6">Jl. Desa Indah No. 123, Kecamatan Sejahtera, Kabupaten Makmur, Provinsi Bahagia</p>
+                    
+                    <h3 class="font-bold mb-4 text-xl">Kontak</h3>
+                    <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i>0812345678910</p>
+                    <p class="mb-6"><i class="fas fa-envelope mr-2"></i>bumenjelapan@gmail.com</p>
+                    
+                    <h3 class="font-bold mb-4 text-xl">Media Sosial</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-4 right-4 bg-secondary text-white p-2 rounded-full hidden hover:bg-opacity-80 transition-colors">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.querySelector(".md\\:hidden button");
+            const mobileMenu = document.querySelector(".navbar-menu");
+
+            menuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    </script>
+</body>
+</html>
